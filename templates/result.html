@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+   <body>
+      result of addition : {{ msg }}
+
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>ID</td>
+            <td>Score</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["name"]}}</td>
+               <td>{{row["ident"]}}</td>
+               <td> {{ row["score"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+
+      <h2><a href="enternew">enter new data</a></h2>
+      <h2><a href="delete">delete data</a></h2>
+      <h2><a href="list">view database</a></h2>
+      <h2><a href="search">search database</a></h2>
+      <h2><a href = "\">go back to home page</a></h2>
+   </body>
+</html>

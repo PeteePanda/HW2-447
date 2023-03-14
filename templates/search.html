@@ -1,0 +1,34 @@
+<html>
+   <body>
+      <form action = "{{ url_for('searchrec') }}" method = "POST">
+         <h3>Student Information</h3>
+         <table border = 1>
+            <thead>
+               <td>Name</td>
+               <td>ID</td>
+               <td>Score</td>
+            </thead>
+            
+            {% for row in rows %}
+               <tr>
+                  <td>{{row["name"]}}</td>
+                  <td>{{row["ident"]}}</td>
+                  <td> {{ row["score"]}}</td>
+               </tr>
+            {% endfor %}
+         </table>
+
+         <h3>Enter Information to search a record</h3>
+         Name<br>
+         <input type = "text" name = "nm"></input></br>
+         
+         Identification Number<br>
+         <input type = "number" name = "id" ></input></br>
+
+         Score<br>
+         <input type = "number" name = "scr" ></input></br>
+
+         <input type = "submit" value = "submit" /><br>
+      </form>
+   </body>
+</html>
